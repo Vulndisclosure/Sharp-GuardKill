@@ -2,7 +2,7 @@
   "name": "sharp-guardkill",
   "command_name": "sharp-guardkill",
   "entrypoint": "Main",
-  "help": "Disable Windows Credential Guard at runtime via LSA ISO teardown event and confirm completion",
+  "help": "Disable Windows Credential Guard at runtime via LSA ISO teardown event and confirm completion...by @Vulndisclosure",
   "long_help": "Signals the internal \\LSA_ISO_DISABLE_CREDENTIAL_GUARD event as SYSTEM to unload CredGuard from LsaIso.exe, then polls NtOpenEvent to prove the teardown completed.\n\nRequirements:\n  - Beacon must be x64 and running as NT AUTHORITY\\SYSTEM\n  - VBS must be enabled and CredGuard must be configured\n  - No arguments are taken; the tool exits with a status code that encodes the result\n\nExit codes:\n  0  - CredGuard disabled (or already disabled, teardown confirmed)\n  1  - SYSTEM impersonation failed (missing privileges)\n  3  - Signal delivered but event did not disappear within 10s (teardown incomplete)\n  4  - Failed to open the event (likely ACCESS_DENIED)\n  5  - NtSetEvent failed\n  99 - Unexpected result",
   "allow_args": false,
   "is_assembly": true,
