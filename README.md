@@ -172,7 +172,7 @@ dumpbin /dependents CredGuardPoc.exe
 
 ---
 
-Usage
+## Usage
 
 Standalone (interactive)
 
@@ -222,7 +222,7 @@ Sliver captures stdout, and the exit code is visible via the beacon console.
 
 ---
 
-Sliver execute-assembly Notes
+## Sliver execute-assembly Notes
 
 · 64-bit only. The PE is /platform:x64. Loading it from a 32-bit implant yields BadImageFormatException before Main.
 · No GAC dependencies. The assembly references only mscorlib and System, both of which are always present in any Windows CLR host.
@@ -233,7 +233,7 @@ Sliver execute-assembly Notes
 
 ---
 
-Why Not WMI
+## Why Not WMI
 
 The original design used Win32_DeviceGuard from root\Microsoft\Windows\DeviceGuard to read SecurityServicesRunning. That approach is functionally correct but problematic under execute-assembly:
 
@@ -246,7 +246,7 @@ The NtOpenEvent polling loop replaces WMI with a more precise runtime signal at 
 
 ---
 
-Limitations
+## Limitations
 
 · VBS must be running. If Virtualization-Based Security is disabled at the firmware/OS level, the lsaiso namespace does not exist — the tool exits 0 / AlreadyOff.
 · CredGuard must be configured. If LsaCfgFlags was never set (or was set to 0), the event is not created — exit 0 / AlreadyOff.
@@ -256,7 +256,7 @@ Limitations
 
 ---
 
-Disclaimer
+## Disclaimer
 
 This tool is provided strictly for authorized security testing, red-team engagements, CTF environments, and personal lab research.
 
@@ -264,6 +264,6 @@ Using it against systems without explicit written permission is illegal and unet
 
 ---
 
-Made by @Vulndisclosure
+### Made by @Vulndisclosure
 
 ```
