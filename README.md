@@ -125,9 +125,9 @@ The source targets the **C# 3.0** syntax level to maximize compiler compatibilit
 
 ```bash
 TERM=dumb mcs -target:exe -platform:x64 -optimize+ \
-  -out:CredGuardPoc.exe \
+  -out:CredGuardKill.exe \
   -r:System.dll \
-  CredGuardPoc.cs
+  CredGuardKill.cs
 ```
 
 The TERM=dumb prefix works around a Mono bug on some distros where terminfo files exceed the 4 KB limit and crash System.Console initialization.
@@ -137,9 +137,9 @@ The TERM=dumb prefix works around a Mono bug on some distros where terminfo file
 ```cmd
 %WINDIR%\Microsoft.NET\Framework64\v4.0.30319\csc.exe ^
   /target:exe /platform:x64 /optimize+ ^
-  /out:CredGuardPoc.exe ^
+  /out:CredGuardKill.exe ^
   /r:System.dll ^
-  CredGuardPoc.cs
+  CredGuardKill.cs
 ```
 
 Roslyn (Windows, from VS or Build Tools)
@@ -147,9 +147,9 @@ Roslyn (Windows, from VS or Build Tools)
 ```cmd
 "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe" ^
   /target:exe /platform:x64 /optimize+ ^
-  /out:CredGuardPoc.exe ^
+  /out:CredGuardKill.exe ^
   /r:System.dll ^
-  CredGuardPoc.cs
+  CredGuardKill.cs
 ```
 
 Verification
