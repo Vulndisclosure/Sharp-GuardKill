@@ -1,7 +1,8 @@
 
 # CredGuard Killer 
 
-(C# port of CredGuardRuntimeShutdown[link]https://github.com/S12cybersecurity/CredGuardRuntimeShutdown)
+(C# port of CredGuardRuntimeShutdown. https://github.com/S12cybersecurity/CredGuardRuntimeShutdown)
+
 A minimal, dependency-free PoC that disables Windows **Credential Guard** at runtime by signaling the internal LSA ISO event `\LSA_ISO_DISABLE_CREDENTIAL_GUARD`.
 
 The tool is designed for offensive security research, red-team engagements, and lab environments where you need to tear down Credential Guard without a reboot and **verify with certainty** whether the teardown actually succeeded.
