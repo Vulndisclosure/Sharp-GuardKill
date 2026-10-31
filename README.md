@@ -183,7 +183,7 @@ CredGuardPoc.exe
 Requires the current token to be NT AUTHORITY\SYSTEM (or elevated admin with SeDebugPrivilege).
 
 ```
-=== CredGuardPoc.exe (Mono teardown-only, with precise confirmation) ===
+=== CredGuardKill.exe (teardown-only, with precise confirmation) ===
 
 [Stage 0] Enable SeDebugPrivilege
   [+] SeDebugPrivilege enabled
